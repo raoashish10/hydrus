@@ -124,7 +124,7 @@ def getType(class_path: str, method: str) -> Any:
     for supportedOp in get_doc(
     ).parsed_classes[class_path]["class"].supportedOperation:
         if supportedOp.method == method:
-            class_type = supportedOp.expects.split(expanded_base_url)[1]
+            class_type = supportedOp.expects.split(expanded_base_url)[0]
             return class_type
 
 
